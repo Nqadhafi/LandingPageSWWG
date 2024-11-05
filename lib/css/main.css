@@ -5,3 +5,11 @@ body {
 img#logo-utama {
     max-width: 8rem;
 }
+
+.text-blue {
+    color : #144C99;
+}
+
+.bg-blue {
+    background-color: #144C99;
+}
