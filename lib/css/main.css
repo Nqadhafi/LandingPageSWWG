@@ -19,3 +19,7 @@ img#logo-utama {
     margin-bottom : -5rem;
     z-index: 0;
 }
+
+.text-footer {
+    color: rgb(153, 153, 153);
+}
