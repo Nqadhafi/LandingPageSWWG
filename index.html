@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="./lib/css/bootstrap.min.css" />
   <link rel="stylesheet" href="./lib/css/main.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <script src="./lib/js/main.js"></script>
   <script src="./lib/js/bootstrap.bundle.min.js"></script>
 </head>
@@ -30,13 +31,13 @@
             <a class="nav-link text-dark fw-bold" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-dark fw-bold" href="#">Produk</a>
+            <a class="nav-link text-dark fw-bold" href="#produk">Produk</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-dark fw-bold" href="#">Tentang Kami</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-dark fw-bold" href="#">Order Sekarang</a>
+            <a class="nav-link text-dark fw-bold" href="#order">Order Sekarang</a>
           </li>
         </ul>
       </div>
@@ -149,7 +150,7 @@
   </div>
 
   <!-- Product Categories Section -->
-  <div class="container mt-5">
+  <div class="container mt-5" id="produk">
     <h3 class="text-center fw-bold">MAU CETAK APA HARI INI?</h3>
     <ul class="nav nav-tabs justify-content-center mt-4" id="productTab" role="tablist">
       <li class="nav-item">
@@ -195,18 +196,24 @@
   <div class="container-fluid bg-blue position-relative overlay mt-5" style="height: 28rem">
     <!-- Order Section -->
 
-    <div class="container align-content-center position-absolute pb-5 top-0 start-50 translate-middle">
+    <div class="container align-content-center position-absolute pb-5 top-0 start-50 translate-middle" id="order">
       <h3 class="text-center fw-bold mb-4">ORDER DI SINI</h3>
       <div class="rounded-3 text-center shadow-lg bg-white py-5">
         <div class="d-grid justify-content-center gap-5">
           <div>
             <h4 class="fw-bold">Admin 1</h4>
-            <a href="https://wa.me/6281234567890" class="btn btn-success">Hubungi Kami</a>
+            <a href="https://wa.me/6281380999999" class="btn btn-success d-flex  gap-2">
+              <i class="bi bi-whatsapp"></i>0813-8099-9999
+            </a>
           </div>
           <div>
-            <h4 class="fw-bold">Admin 1</h4>
-            <a href="https://wa.me/6281234567890" class="btn btn-success">Hubungi Kami</a>
+            <h4 class="fw-bold">Admin 2</h4>
+            <a href="https://wa.me/6285601367643" class="btn btn-success d-flex  gap-2 ">
+              <i class="bi bi-whatsapp"></i>0856-0136-7643
+            </a>
           </div>
+          
+          
         </div>
       </div>
     </div>
