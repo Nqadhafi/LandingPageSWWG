@@ -74,11 +74,13 @@
     >
       <div class="carousel-inner rounded-4">
         <div class="carousel-item active">
+          <a href="" target="_blank">
           <img
             src="https://via.placeholder.com/1200x400"
             class="d-block w-100"
             alt="Banner 1"
           />
+        </a>
         </div>
         <div class="carousel-item">
           <img
@@ -250,72 +252,87 @@
     <!-- Product Categories Section -->
     <div class="container mt-5" id="produk">
       <h3 class="text-center fw-bold">MAU CETAK APA HARI INI?</h3>
-      <ul
-        class="nav nav-tabs justify-content-center mt-4"
-        id="productTab"
-        role="tablist"
-      >
-        <li class="nav-item">
-          <a
-            class="nav-link active"
-            id="brosur-tab"
-            data-bs-toggle="tab"
-            href="#brosur"
-            role="tab"
-            >Brosur/Flyer</a
-          >
-        </li>
-        <li class="nav-item">
-          <a
-            class="nav-link"
-            id="poster-tab"
-            data-bs-toggle="tab"
-            href="#poster"
-            role="tab"
-            >Poster</a
-          >
-        </li>
-        <li class="nav-item">
-          <a
-            class="nav-link"
-            id="banner-tab"
-            data-bs-toggle="tab"
-            href="#banner"
-            role="tab"
-            >Banner</a
-          >
-        </li>
-        <!-- Add more tabs as needed -->
+  
+      <!-- Tabs for Product Categories -->
+      <ul class="nav nav-tabs justify-content-center mt-4 gap-5" id="productTab" role="tablist">
+          <li class="nav-item">
+              <a class="nav-link active" id="brosur-tab" data-bs-toggle="tab" href="#brosur" role="tab">Brosur/Flyer</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" id="poster-tab" data-bs-toggle="tab" href="#poster" role="tab">Poster</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" id="banner-tab" data-bs-toggle="tab" href="#banner" role="tab">Banner</a>
+          </li>
+          <!-- Tambahkan lebih banyak kategori jika diperlukan -->
       </ul>
+  
+      <!-- Tab Content for Products -->
       <div class="tab-content mt-4" id="productTabContent">
-        <div class="tab-pane fade show active" id="brosur" role="tabpanel">
-          <div class="row">
-            <div class="col-md-3">
-              <div class="bg-light" style="height: 10rem"></div>
-            </div>
-            <div class="col-md-3">
-              <div class="bg-light" style="height: 10rem"></div>
-            </div>
-            <div class="col-md-3">
-              <div class="bg-light" style="height: 10rem"></div>
-            </div>
-
-            <!-- Add more product placeholders as needed -->
+          
+          <!-- Brosur/Flyer Content -->
+          <div class="tab-pane fade show active" id="brosur" role="tabpanel">
+              <div class="row">
+                  <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                      <div class="card">
+                          <div class="card-body bg-light" style="height: 10rem;"></div>
+                          <h5 class="card-title text-center mt-2">Brosur 1</h5>
+                      </div>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                      <div class="card">
+                          <div class="card-body bg-light" style="height: 10rem;"></div>
+                          <h5 class="card-title text-center mt-2">Brosur 2</h5>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-        <div class="tab-pane fade" id="poster" role="tabpanel">
-          <!-- Poster products content -->
-        </div>
-        <div class="tab-pane fade" id="banner" role="tabpanel">
-          <!-- Banner products content -->
-        </div>
+  
+          <!-- Poster Content -->
+          <div class="tab-pane fade" id="poster" role="tabpanel">
+              <div class="row">
+                  <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                      <div class="card">
+                          <div class="card-body bg-light" style="height: 10rem;"></div>
+                          <h5 class="card-title text-center mt-2">Poster 1</h5>
+                      </div>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                      <div class="card">
+                          <div class="card-body bg-light" style="height: 10rem;"></div>
+                          <h5 class="card-title text-center mt-2">Poster 2</h5>
+                      </div>
+                  </div>
+              </div>
+          </div>
+  
+          <!-- Banner Content -->
+          <div class="tab-pane fade" id="banner" role="tabpanel">
+              <div class="row">
+                  <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                      <div class="card">
+                          <div class="card-body bg-light" style="height: 10rem;"></div>
+                          <h5 class="card-title text-center mt-2">Banner 1</h5>
+                      </div>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                      <div class="card">
+                          <div class="card-body bg-light" style="height: 10rem;"></div>
+                          <h5 class="card-title text-center mt-2">Banner 2</h5>
+                      </div>
+                  </div>
+              </div>
+          </div>
       </div>
+  
+      <!-- Price List Button -->
       <div class="text-center mt-5">
-        <a href="http://" class="btn btn-warning border-black fw-bold"
-          >Cek Price List Lengkap Di Sini</a
-        >
+          <a href="http://" class="btn btn-warning border-black fw-bold" target="_blank">Cek Price List Lengkap Di Sini</a>
       </div>
-    </div>
+  </div>
+  
+
+
     <div style="height: 20rem"></div>
     <!-- Overlayy Section -->
     <div
@@ -359,7 +376,7 @@
 >
   <h3 class="text-center text-white fw-bold mb-4">KLIEN KAMI</h3>
   <div class="rounded-3 text-center shadow-lg bg-white py-5 mb-5">
-    <div class="client-slider m-5">
+    <div class="client-slider m-5 ">
       <div><img src="assets/img/Logo-Long.webp" class="img-fluid" alt="Client 1"></div>
       <div><img src="assets/img/Logo-Single.webp" class="img-fluid" alt="Client 2"></div>
       <div><img src="client3.jpg" class="img-fluid" alt="Client 3"></div>
