@@ -23,3 +23,10 @@ img#logo-utama {
 .text-footer {
     color: rgb(153, 153, 153);
 }
+
+.client-slider img {
+    max-height: 5rem; /* Tentukan tinggi maksimum gambar */
+    width: auto;      /* Lebar otomatis untuk menjaga proporsi */
+    margin: 0 auto;   /* Memusatkan gambar dalam setiap slide */
+    display: block;   /* Mengatur gambar sebagai elemen block untuk pemusatan */
+}

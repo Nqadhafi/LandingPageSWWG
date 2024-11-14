@@ -16,8 +16,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
-    <script src="./lib/js/main.js"></script>
-    <script src="./lib/js/bootstrap.bundle.min.js"></script>
+    <!-- Slick CSS -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+
   </head>
 
   <body>
@@ -350,26 +353,23 @@
         </div>
       </div>
       <!-- Clients Section -->
-      <div
-        class="container align-content-center position-absolute top-100 start-50 translate-middle"
-        style="height: 18rem"
-      >
-        <h3 class="text-center text-white fw-bold mb-4">KLIEN KAMI</h3>
-        <div class="rounded-3 text-center shadow-lg bg-white py-5 mb-5">
-          <div class="row mx-auto">
-            <div class="col-md-3">
-              <!-- Placeholder for client logo -->
-              <div class="bg-light" style="height: 5em"></div>
-            </div>
-            <div class="col-md-3">
-              <!-- Placeholder for client logo -->
-              <div class="bg-light" style="height: 5em"></div>
-            </div>
+<div
+  class="container align-content-center position-absolute top-100 start-50 translate-middle"
+  style="height: 18rem"
+>
+  <h3 class="text-center text-white fw-bold mb-4">KLIEN KAMI</h3>
+  <div class="rounded-3 text-center shadow-lg bg-white py-5 mb-5">
+    <div class="client-slider m-5">
+      <div><img src="assets/img/Logo-Long.webp" class="img-fluid" alt="Client 1"></div>
+      <div><img src="assets/img/Logo-Single.webp" class="img-fluid" alt="Client 2"></div>
+      <div><img src="client3.jpg" class="img-fluid" alt="Client 3"></div>
+      <div><img src="client4.jpg" class="img-fluid" alt="Client 4"></div>
+      <div><img src="client5.jpg" class="img-fluid" alt="Client 5"></div>
+  </div>
+  
+  </div>
+</div>
 
-            <!-- Add more client logos as needed -->
-          </div>
-        </div>
-      </div>
     </div>
     <div style="height: 20rem"></div>
     <!-- Footer -->
@@ -427,4 +427,10 @@
     
     </footer>
   </body>
+  
+    <script src="./lib/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/js/jquery-3.5.1.slim.min.js"></script>
+    <!-- Slick JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="lib/js/main.js"></script>
 </html>
