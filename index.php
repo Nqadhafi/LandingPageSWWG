@@ -124,25 +124,16 @@ include 'data.php';
       <div class="row">
         <div class="col-md-7">
           <h2 class="fw-bold text-blue">
-            <?php echo $artikel['title'] ?>
+            <?php echo $artikel['title'] ?? ''?>
           </h2>
           <p>
-            Shabat Printing adalah solusi terbaik untuk kebutuhan percetakan di
-            Kota Solo, menggabungkan teknologi mutakhir untuk hasil cetak
-            berkualitas tinggi. Kami menggunakan mesin HP Indigo untuk digital
-            printing, memberikan akurasi warna dan detail yang luar biasa, serta
-            Heidelberg SX-74 untuk cetak offset, memastikan produksi cepat
-            dengan hasil yang konsisten. Dari brosur, kartu nama, hingga
-            spanduk, kami siap melayani dengan standar profesional. Dengan
-            dukungan tim ahli, kami memastikan setiap proyek selesai tepat
-            waktu, efisien, dan sesuai harapan Anda. Hubungi kami sekarang untuk
-            solusi cetak yang tak tertandingi!
+          <?php echo $artikel['content'] ?? ''?>
           </p>
         </div>
         <div class="col-md-5">
           <!-- Placeholder for image -->
-          <div class="bg-light" style="width: 100%; height: 250px">
-            <img src="./assets/img/<?php echo $artikel['image'] ?>" alt="<?php echo $artikel['alt_text'] ?>" class="img-fluid">
+          <div class="bg-light" style="width: 100%; height: 20rem">
+            <img src="./assets/img/<?php echo $artikel['image'] ?? ''?>" alt="<?php echo $artikel['alt_text'] ?? ''?>" class="img-fluid">
           </div>
         </div>
       </div>

@@ -45,15 +45,15 @@ if ($action === 'Update Artikel') {
     if ($_FILES['image']['name']) {
         $image = $_FILES['image'];
         $imageName = time() . '_' . basename($image['name']);
-        $targetPath = '../assets/img/' . $imageName;
+        $targetPath = '../../../assets/img/' . $imageName;
         
         if (move_uploaded_file($image['tmp_name'], $targetPath)) {
             // First, check if there's an existing image and remove it
             $query = "SELECT image FROM article WHERE id = $id";
             $result = mysqli_query($conn, $query);
             $article = mysqli_fetch_assoc($result);
-            if ($article && file_exists('../assets/img/' . $article['image'])) {
-                unlink('../assets/img/' . $article['image']);
+            if ($article && file_exists('../../../assets/img/' . $article['image'])) {
+                unlink('../../../assets/img/' . $article['image']);
             }
 
             // Update artikel dengan gambar baru
@@ -83,8 +83,8 @@ if ($action === 'delete') {
     $result = mysqli_query($conn, $query);
     $article = mysqli_fetch_assoc($result);
 
-    if ($article && file_exists('../assets/img/' . $article['image'])) {
-        unlink('../assets/img/' . $article['image']); // Delete the image
+    if ($article && file_exists('../../../assets/img/' . $article['image'])) {
+        unlink('../../../assets/img/' . $article['image']); // Delete the image
     }
 
     // Delete the article from the database

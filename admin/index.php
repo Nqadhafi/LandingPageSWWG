@@ -20,11 +20,11 @@ switch ($page) {
     case 'artikel':
         include 'pages/form-artikel.php';
         break;
-    case 'user':
-        include 'pages/user.php';
+    case 'banner':
+        include 'pages/form-banner.php';
         break;
     case 'produk':
-        include 'pages/produk.php';
+        include 'pages/banner.php';
         break;
     default:
         include 'pages/dashboard.php';

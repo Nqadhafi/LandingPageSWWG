@@ -27,8 +27,8 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="#" class="nav-link">
+              <li class="nav-item <?php echo $page == 'banner' ? 'active' : ''; ?>">
+                <a href="?page=banner" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Banner Utama / Promo</p>
                 </a>
