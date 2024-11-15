@@ -446,6 +446,6 @@
     <script src="lib/js/bootstrap.bundle.min.js"></script>
     <script src="lib/js/jquery-3.5.1.slim.min.js"></script>
     <!-- Slick JS -->
-    <script src="/lib/js/slick-1.8.1.min.js"></script>
+    <script src="lib/js/slick-1.8.1.min.js"></script>
     <script src="lib/js/main.js"></script>
 </html>
