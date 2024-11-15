@@ -1,3 +1,7 @@
+<?php
+include 'data.php';
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -120,7 +124,7 @@
       <div class="row">
         <div class="col-md-7">
           <h2 class="fw-bold text-blue">
-            Percetakan Digital Printing Dan Offset Terbaik Di Kota Solo
+            <?php echo $artikel['title'] ?>
           </h2>
           <p>
             Shabat Printing adalah solusi terbaik untuk kebutuhan percetakan di
@@ -137,7 +141,9 @@
         </div>
         <div class="col-md-5">
           <!-- Placeholder for image -->
-          <div class="bg-light" style="width: 100%; height: 250px"></div>
+          <div class="bg-light" style="width: 100%; height: 250px">
+            <img src="./assets/img/<?php echo $artikel['image'] ?>" alt="<?php echo $artikel['alt_text'] ?>" class="img-fluid">
+          </div>
         </div>
       </div>
     </div>

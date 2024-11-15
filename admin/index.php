@@ -17,8 +17,8 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
 
 // Memuat halaman sesuai pilihan
 switch ($page) {
-    case 'dashboard':
-        include 'pages/dashboard.php';
+    case 'artikel':
+        include 'pages/form-artikel.php';
         break;
     case 'user':
         include 'pages/user.php';

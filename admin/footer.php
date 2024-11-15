@@ -33,5 +33,15 @@
 <script src="dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
+<script>
+    $(document).ready(function(){
+    $('.sidebar-menu a').on('click', function(e) {
+        e.preventDefault();
+        var page = $(this).attr('href').split('=')[1];
+        $('#content').load('pages/' + page + '.php');
+    });
+});
+
+</script>
 </body>
 </html>
