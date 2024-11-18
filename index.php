@@ -26,12 +26,12 @@ include 'data.php';
   </head>
 
   <body>
-    <!-- Preloader -->
+    <!-- Preloader
   <div id="preloader">
     <div class="preloader-content">
         <img src="assets/img/Logo-Long.webp" alt="Logo" class="preloader-logo">
     </div>
-</div>
+</div> -->
 
     <!-- Header Navigation -->
     <nav class="navbar shadow-sm bg-white navbar-expand-md sticky-top">
@@ -75,55 +75,29 @@ include 'data.php';
       </div>
     </nav>
 
-    <!-- Banner Slider Section -->
-    <div
-      id="bannerCarousel"
-      class="carousel slide mt-4 container"
-      data-bs-ride="carousel"
-    >
-      <div class="carousel-inner rounded-4">
-        <div class="carousel-item active">
-          <a href="" target="_blank">
-          <img
-            src="https://via.placeholder.com/1200x400"
-            class="d-block w-100"
-            alt="Banner 1"
-          />
-        </a>
+       <!-- Banner Slider Section -->
+       <div id="bannerCarousel" class="carousel slide mt-4 container" data-bs-ride="carousel">
+        <div class="carousel-inner rounded-4">
+            <?php foreach ($banners as $index => $banner): ?>
+                <div class="carousel-item <?= $index === 0 ? 'active' : '' ?>">
+                    <a href="<?= htmlspecialchars($banner['link_refferece'] ?? '#') ?>" target="_blank">
+                        <img
+                            src="./assets/banner/<?= htmlspecialchars($banner['image']) ?>"
+                            class="d-block w-100"
+                            alt="Banner <?= $index + 1 ?>"
+                        />
+                    </a>
+                </div>
+            <?php endforeach; ?>
         </div>
-        <div class="carousel-item">
-          <img
-            src="https://via.placeholder.com/1200x400"
-            class="d-block w-100"
-            alt="Banner 2"
-          />
-        </div>
-        <div class="carousel-item">
-          <img
-            src="https://via.placeholder.com/1200x400"
-            class="d-block w-100"
-            alt="Banner 3"
-          />
-        </div>
-      </div>
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#bannerCarousel"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#bannerCarousel"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+        <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
 
     <!-- Hero Section -->
