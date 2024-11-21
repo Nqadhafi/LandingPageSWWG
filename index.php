@@ -80,7 +80,7 @@ include 'data.php';
         <div class="carousel-inner rounded-4">
             <?php foreach ($banners as $index => $banner): ?>
                 <div class="carousel-item <?= $index === 0 ? 'active' : '' ?>">
-                    <a href="<?= htmlspecialchars($banner['link_refferece'] ?? '#') ?>" target="_blank">
+                    <a href="<?= htmlspecialchars($banner['link_reference'] ?? '#') ?>" target="_blank">
                         <img
                             src="./assets/banner/<?= htmlspecialchars($banner['image']) ?>"
                             class="d-block w-100"
