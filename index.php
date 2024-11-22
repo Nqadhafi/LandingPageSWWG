@@ -26,12 +26,12 @@ include 'data.php';
   </head>
 
   <body>
-    <!-- Preloader
+    <!-- Preloader -->
   <div id="preloader">
     <div class="preloader-content">
         <img src="assets/img/Logo-Long.webp" alt="Logo" class="preloader-logo">
     </div>
-</div> -->
+</div>
 
     <!-- Header Navigation -->
     <nav class="navbar shadow-sm bg-white navbar-expand-md sticky-top">
