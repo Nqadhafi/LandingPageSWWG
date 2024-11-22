@@ -40,7 +40,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="?page=kategori" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Kategori Produk</p>
                 </a>
