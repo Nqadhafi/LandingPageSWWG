@@ -23,8 +23,17 @@ switch ($page) {
     case 'banner':
         include 'pages/form-banner.php';
         break;
+    case 'kategori':
+        include 'pages/form-kategori.php';
+        break;
     case 'produk':
-        include 'pages/banner.php';
+        include 'pages/form-produk.php';
+        break;
+    case 'link':
+        include 'pages/form-link.php';
+        break;
+    case 'customer':
+        include 'pages/form-customer.php';
         break;
     default:
         include 'pages/dashboard.php';
