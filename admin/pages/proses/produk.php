@@ -68,7 +68,7 @@ if ($action === 'Tambah Produk') {
         $fileType = mime_content_type($image['tmp_name']);
 
         if (!in_array($fileType, $allowedTypes)) {
-            die("Format file tidak didukung.");
+            die("Hayo mau upload apa?.");
         }
 
         $imageName = time() . '_' . preg_replace('/[^a-zA-Z0-9\._-]/', '', basename($image['name']));

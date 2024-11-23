@@ -22,7 +22,7 @@ if ($action === 'Tambah Artikel') {
     $fileType = mime_content_type($image['tmp_name']);
 
     if (!in_array($fileType, $allowedTypes)) {
-        die("Format file tidak didukung. Hanya JPEG, PNG, dan GIF yang diperbolehkan.");
+        die("Hayo mau upload apa?.");
     }
 
     $imageName = time() . '_' . preg_replace('/[^a-zA-Z0-9\._-]/', '', basename($image['name']));
