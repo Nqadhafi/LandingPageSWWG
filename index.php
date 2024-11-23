@@ -83,7 +83,7 @@ include 'data.php';
                     <a href="<?= htmlspecialchars($banner['link_reference'] ?? '#') ?>" target="_blank">
                         <img
                             src="./assets/banner/<?= htmlspecialchars($banner['image']) ?>"
-                            class="d-block w-100"
+                            class="d-block w-100 img-fluid"
                             alt="Banner <?= $index + 1 ?>"
                         />
                     </a>
@@ -225,82 +225,58 @@ include 'data.php';
       <!-- End Container -->
     </div>
 
-    <!-- Product Categories Section -->
-    <div class="container mt-5" id="produk">
-      <h3 class="text-center fw-bold">MAU CETAK APA HARI INI?</h3>
-  
-      <!-- Tabs for Product Categories -->
-      <ul class="nav nav-tabs justify-content-center mt-4 gap-5" id="productTab" role="tablist">
-          <li class="nav-item">
-              <a class="nav-link active" id="brosur-tab" data-bs-toggle="tab" href="#brosur" role="tab">Brosur/Flyer</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" id="poster-tab" data-bs-toggle="tab" href="#poster" role="tab">Poster</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" id="banner-tab" data-bs-toggle="tab" href="#banner" role="tab">Banner</a>
-          </li>
-          <!-- Tambahkan lebih banyak kategori jika diperlukan -->
-      </ul>
-  
-      <!-- Tab Content for Products -->
-      <div class="tab-content mt-4" id="productTabContent">
-          
-          <!-- Brosur/Flyer Content -->
-          <div class="tab-pane fade show active" id="brosur" role="tabpanel">
-              <div class="row">
-                  <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                      <div class="card">
-                          <div class="card-body bg-light" style="height: 10rem;"></div>
-                          <h5 class="card-title text-center mt-2">Brosur 1</h5>
-                      </div>
-                  </div>
-                  <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                      <div class="card">
-                          <div class="card-body bg-light" style="height: 10rem;"></div>
-                          <h5 class="card-title text-center mt-2">Brosur 2</h5>
-                      </div>
-                  </div>
-              </div>
-          </div>
-  
-          <!-- Poster Content -->
-          <div class="tab-pane fade" id="poster" role="tabpanel">
-              <div class="row">
-                  <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                      <div class="card">
-                          <div class="card-body bg-light" style="height: 10rem;"></div>
-                          <h5 class="card-title text-center mt-2">Poster 1</h5>
-                      </div>
-                  </div>
-                  <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                      <div class="card">
-                          <div class="card-body bg-light" style="height: 10rem;"></div>
-                          <h5 class="card-title text-center mt-2">Poster 2</h5>
-                      </div>
-                  </div>
-              </div>
-          </div>
-  
-          <!-- Banner Content -->
-          <div class="tab-pane fade" id="banner" role="tabpanel">
-              <div class="row">
-                  <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                      <div class="card">
-                          <div class="card-body bg-light" style="height: 10rem;"></div>
-                          <h5 class="card-title text-center mt-2">Banner 1</h5>
-                      </div>
-                  </div>
-                  <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                      <div class="card">
-                          <div class="card-body bg-light" style="height: 10rem;"></div>
-                          <h5 class="card-title text-center mt-2">Banner 2</h5>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  
+<!-- Product Categories Section -->
+<div class="container mt-5" id="produk">
+    <h3 class="text-center fw-bold">MAU CETAK APA HARI INI?</h3>
+
+    <!-- Tabs for Product Categories -->
+    <ul class="nav nav-tabs justify-content-center mt-4 gap-5" id="productTab" role="tablist">
+        <?php foreach ($categories as $index => $category): ?>
+            <li class="nav-item">
+              
+                <a class="nav-link <?= $index === 0 ? 'active' : '' ?>" 
+                   id="tab-<?= strtolower($category['name']) ?>" 
+                   data-category-id="<?= $category['id'] ?>" 
+                   role="tab">
+                   
+                    <?= htmlspecialchars($category['name']) ?>
+                    </button>
+                </a>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+
+    <!-- Container for Products -->
+    <div class="tab-content mt-4" id="productContainer">
+        <?php foreach ($categories as $index => $category): ?>
+            <div class="row category-products <?= $index === 0 ? '' : 'd-none' ?>" 
+                 data-category-id="<?= $category['id'] ?>">
+                <?php if (!empty($products[$category['id']])): ?>
+                    <?php foreach ($products[$category['id']] as $product): ?>
+                        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                            <div class="card">
+                                <img src="./assets/product/<?= htmlspecialchars($product['image']) ?>" 
+                                     class="card-img-top" 
+                                     alt="<?= htmlspecialchars($product['name']) ?>" 
+                                     style="height: 150px; object-fit: cover;">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center mt-2"><?= htmlspecialchars($product['name']) ?></h5>
+                                    <p class="text-center text-muted"><?= htmlspecialchars($product['price_range']) ?></p>
+                                    <a href="<?= htmlspecialchars($product['link_reference']) ?>" 
+                                       class="btn btn-primary btn-sm d-block mt-2" 
+                                       target="_blank">Lihat Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <p class="text-center text-muted">Belum ada produk di kategori ini.</p>
+                <?php endif; ?>
+            </div>
+        <?php endforeach; ?>
+    </div>
+</div>
+
       <!-- Price List Button -->
       <div class="text-center mt-5">
           <a href="http://" class="btn btn-warning border-black fw-bold" target="_blank">Cek Price List Lengkap Di Sini</a>
