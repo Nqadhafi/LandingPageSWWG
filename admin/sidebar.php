@@ -57,6 +57,12 @@
                   <p>Link</p>
                 </a>
               </li>
+              <li class="nav-item">
+                <a href="?page=customer" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Customer</p>
+                </a>
+              </li>
             </ul>
           </li>
         </ul>
