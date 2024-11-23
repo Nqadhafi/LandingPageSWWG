@@ -1,5 +1,6 @@
 <?php
 include './config.php';
+include './auth.php';
 
 // Cek apakah artikel sudah ada
 $query = "SELECT * FROM article LIMIT 1";

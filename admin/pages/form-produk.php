@@ -1,5 +1,7 @@
 <?php
 include './config.php';
+include './auth.php';
+
 
 // Cek apakah ini aksi edit
 $isEdit = isset($_GET['action']) && $_GET['action'] == 'edit' && isset($_GET['id']);

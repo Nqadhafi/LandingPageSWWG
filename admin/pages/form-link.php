@@ -1,5 +1,6 @@
 <?php
 include './config.php';
+include './auth.php';
 
 // Cek apakah ini aksi edit
 $query = "SELECT * FROM links LIMIT 1"; // Mengambil data link yang sudah ada
