@@ -258,13 +258,22 @@ include 'data.php';
                                 <img src="./assets/product/<?= htmlspecialchars($product['image']) ?>" 
                                      class="card-img-top" 
                                      alt="<?= htmlspecialchars($product['name']) ?>" 
-                                     style="height: 150px; object-fit: cover;">
+                                     style="height: 15rem; object-fit: cover;">
                                 <div class="card-body">
-                                    <h5 class="card-title text-center mt-2"><?= htmlspecialchars($product['name']) ?></h5>
+                                    <h5 class="card-title text-center mt-2 fw-bold"><?= htmlspecialchars($product['name']) ?></h5>
                                     <p class="text-center text-muted"><?= htmlspecialchars($product['price_range']) ?></p>
-                                    <a href="<?= htmlspecialchars($product['link_reference']) ?>" 
-                                       class="btn btn-primary btn-sm d-block mt-2" 
-                                       target="_blank">Lihat Detail</a>
+                                    <a href="#" 
+                                      class="btn btn-primary btn-sm d-block mt-2 btn-detail" 
+                                      data-bs-toggle="modal" 
+                                      data-bs-target="#productDetailModal" 
+                                      data-name="<?= htmlspecialchars($product['name']) ?>" 
+                                      data-image="./assets/product/<?= htmlspecialchars($product['image']) ?>" 
+                                      data-description="<?= htmlspecialchars($product['description']) ?>" 
+                                      data-price-range="<?= htmlspecialchars($product['price_range']) ?>" 
+                                      data-link="<?= htmlspecialchars($product['link_reference']) ?>">
+                                        Lihat Detail
+                                    </a>
+
                                 </div>
                             </div>
                         </div>
@@ -395,6 +404,27 @@ include 'data.php';
       </p>
     
     </footer>
+    <!-- Modal Detail Produk -->
+<div class="modal fade" id="productDetailModal" tabindex="-1" aria-labelledby="productDetailModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title fw-bold" id="productDetailModalLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img src="" alt="" id="productImage" class="img-fluid mb-3">
+                <p id="productDescription"></p>
+                <p><strong>Harga:</strong> <span id="productPriceRange"></span></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                <a href="#" id="productLink" target="_blank" class="btn btn-primary">Order Sekarang</a>
+            </div>
+        </div>
+    </div>
+</div>
+
   </body>
   
     <script src="lib/js/bootstrap.bundle.min.js"></script>

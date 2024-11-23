@@ -68,11 +68,12 @@ if ($isEdit) {
                     <input type="text" name="price_range" class="form-control" value="<?php echo $isEdit ? htmlspecialchars($product['price_range']) : ''; ?>" required>
                 </div>
 
-                <!-- Deskripsi -->
-                <div class="form-group">
-                    <label>Deskripsi:</label>
-                    <textarea name="description" class="form-control" required><?php echo $isEdit ? htmlspecialchars($product['description']) : ''; ?></textarea>
-                </div>
+<!-- Deskripsi -->
+<div class="form-group">
+    <label>Deskripsi:</label>
+    <textarea name="description" class="form-control" rows="5" required><?= $isEdit ? htmlspecialchars($product['description']) : ''; ?></textarea>
+</div>
+
 
                 <!-- Link Referensi -->
                 <div class="form-group">
@@ -143,7 +144,7 @@ if ($isEdit) {
                                 <?php endif; ?>
                                 <p><strong>Kategori:</strong> <?php echo htmlspecialchars($product['category_name']); ?></p>
                                 <p><strong>Harga:</strong> <?php echo htmlspecialchars($product['price_range']); ?></p>
-                                <p><strong>Deskripsi:</strong> <?php echo htmlspecialchars($product['description']); ?></p>
+                                <p><strong>Deskripsi:</strong> <?= nl2br(htmlspecialchars($product['description'])); ?></p>
                                 <p><strong>Link:</strong> <a href="<?php echo htmlspecialchars($product['link_reference']); ?>" target="_blank"><?php echo htmlspecialchars($product['link_reference']); ?></a></p>
                                 <a href="?page=produk&action=edit&id=<?php echo $product['id']; ?>" class="btn btn-warning btn-sm">Edit</a>
                                 <a href="./pages/proses/produk.php?action=delete&id=<?php echo $product['id']; ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus produk ini?');" class="btn btn-danger btn-sm">Hapus</a>
