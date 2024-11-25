@@ -22,10 +22,12 @@ foreach ($categories as $category) {
 }
 
 //Menampilkan Link
-$querry_links = mysqli_query ($conn, "SELECT * FROM links");
-$links = mysqli_fetch_assoc($querry_links);
+$query_links = mysqli_query ($conn, "SELECT * FROM links");
+$links = mysqli_fetch_assoc($query_links);
 
-
+//Menampilkan Logo Customer
+$query_customers = mysqli_query ($conn, "SELECT * FROM customers");
+$customers = mysqli_fetch_all($query_customers, MYSQLI_ASSOC);
 
 ?>
 

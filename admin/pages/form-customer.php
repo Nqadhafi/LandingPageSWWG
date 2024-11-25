@@ -73,7 +73,7 @@ if ($isEdit) {
                                 <h5 class="card-title text-center mt-3"><?php echo htmlspecialchars($customer['name']); ?></h5>
                                 <div class="card-body text-center">
                                     <?php if ($customer['image']): ?>
-                                        <img src="../assets/client/<?php echo htmlspecialchars($customer['image']); ?>" alt="Customer Image" class="img-thumbnail mb-3" style="max-width: 100px;">
+                                        <img src="../assets/client/<?php echo htmlspecialchars($customer['image']); ?>" alt="Customer Image" class="img-thumbnail mb-3" style="max-height: 15rem;">
                                     <?php endif; ?>
                                     <p><a href="<?php echo htmlspecialchars($customer['reference']); ?>" target="_blank">Link Referensi</a></p>
                                     <a href="?page=customer&action=edit&id=<?php echo $customer['id']; ?>" class="btn btn-warning btn-sm">Edit</a>

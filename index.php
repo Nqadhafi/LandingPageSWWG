@@ -340,11 +340,9 @@ include 'data.php';
   <h3 class="text-center text-white fw-bold mb-4">KLIEN KAMI</h3>
   <div class="rounded-3 text-center shadow-lg bg-white py-5 mb-5">
     <div class="client-slider m-5 ">
-      <div><img src="assets/img/Logo-Long.webp" class="img-fluid" alt="Client 1"></div>
-      <div><img src="assets/img/Logo-Single.webp" class="img-fluid" alt="Client 2"></div>
-      <div><img src="client3.jpg" class="img-fluid" alt="Client 3"></div>
-      <div><img src="client4.jpg" class="img-fluid" alt="Client 4"></div>
-      <div><img src="client5.jpg" class="img-fluid" alt="Client 5"></div>
+      <?php foreach ($customers as $customer) : ?>
+      <div><a href="<?= htmlspecialchars($customer['reference']) ?? ''; ?>" target="_blank" rel="noopener noreferrer"><img src="assets/client/<?= htmlspecialchars($customer['image']) ?? ''; ?>" class="img-fluid" alt="<?= htmlspecialchars($customer['name']) ?? ''; ?>"></a></div>
+      <?php endforeach; ?>
   </div>
   
   </div>
