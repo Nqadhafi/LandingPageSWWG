@@ -14,13 +14,13 @@ $action = $_POST['action'] ?? $_GET['action'] ?? null;
 if ($action === 'Tambah Banner' || $action === 'Update Banner') {
     // Validasi dan sanitasi input
     $title = htmlspecialchars($_POST['title'], ENT_QUOTES, 'UTF-8');
-    $link_reference = htmlspecialchars($_POST['link_reference'], ENT_QUOTES, 'UTF-8');
+    $link_reference =$_POST['link_reference'];
     $id = filter_var($_POST['id'] ?? null, FILTER_VALIDATE_INT);
 
     // Validasi file gambar
     $imageName = null;
     if (!empty($_FILES['image']['name'])) {
-        $allowedTypes = ['image/jpeg', 'image/png', 'image/gif'];
+        $allowedTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
         $image = $_FILES['image'];
         $fileType = mime_content_type($image['tmp_name']);
 
