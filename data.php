@@ -20,4 +20,13 @@ foreach ($categories as $category) {
     $query_products = mysqli_query($conn, "SELECT * FROM products WHERE category_id = $category_id");
     $products[$category['id']] = mysqli_fetch_all($query_products, MYSQLI_ASSOC);
 }
+
+//Menampilkan Link
+$querry_links = mysqli_query ($conn, "SELECT * FROM links");
+$links = mysqli_fetch_assoc($querry_links);
+
+
+
 ?>
+
+

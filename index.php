@@ -288,7 +288,7 @@ include 'data.php';
 
       <!-- Price List Button -->
       <div class="text-center mt-5">
-          <a href="http://" class="btn btn-warning border-black fw-bold" target="_blank">Cek Price List Lengkap Di Sini</a>
+          <a href="<?= htmlspecialchars($links['pricelist']) ?? '' ;?>" class="btn btn-warning border-black fw-bold" target="_blank">Cek Price List Lengkap Di Sini</a>
       </div>
   </div>
   
@@ -312,8 +312,9 @@ include 'data.php';
             <div>
               <h4 class="fw-bold">Admin 1</h4>
               <a
-                href="https://wa.me/6281380999999"
+                href="<?= htmlspecialchars($links['admin1']) ?? '' ;?>"
                 class="btn btn-success d-flex gap-2"
+                  target="_blank"
               >
                 <i class="bi bi-whatsapp"></i>0813-8099-9999
               </a>
@@ -321,8 +322,9 @@ include 'data.php';
             <div>
               <h4 class="fw-bold">Admin 2</h4>
               <a
-                href="https://wa.me/6285601367643"
+                href="<?= htmlspecialchars($links['admin2']) ?? '' ;?>"
                 class="btn btn-success d-flex gap-2"
+                target="_blank"
               >
                 <i class="bi bi-whatsapp"></i>0856-0136-7643
               </a>
