@@ -254,11 +254,11 @@ include 'data.php';
                 <?php if (!empty($products[$category['id']])): ?>
                     <?php foreach ($products[$category['id']] as $product): ?>
                         <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                            <div class="card">
+                            <div class="card" style="width: 15rem;">
                                 <img src="./assets/product/<?= htmlspecialchars($product['image']) ?>" 
-                                     class="card-img-top" 
+                                     class="card-img-top img-fluid" 
                                      alt="<?= htmlspecialchars($product['name']) ?>" 
-                                     style="height: 15rem; object-fit: cover;">
+                                     >
                                 <div class="card-body">
                                     <h5 class="card-title text-center mt-2 fw-bold"><?= htmlspecialchars($product['name']) ?></h5>
                                     <p class="text-center text-muted"><?= htmlspecialchars($product['price_range']) ?></p>
