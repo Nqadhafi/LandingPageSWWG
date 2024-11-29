@@ -124,7 +124,7 @@ if ($isEdit) {
             <h3 class="card-title">Daftar Produk</h3>
         </div>
         <div class="card-body">
-            <div class="row">
+            <div class="row m-5">
                 <?php
                 $filterCategory = isset($_GET['filter_category']) ? $_GET['filter_category'] : '';
                 $query = "SELECT products.*, categories.name AS category_name FROM products 

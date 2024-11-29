@@ -230,7 +230,7 @@ include 'data.php';
     <h3 class="text-center fw-bold">MAU CETAK APA HARI INI?</h3>
 
     <!-- Tabs for Product Categories -->
-    <ul class="nav nav-tabs justify-content-center mt-4 gap-5" id="productTab" role="tablist">
+    <ul class="nav nav-tabs justify-content-center mt-4" id="productTab" role="tablist">
         <?php foreach ($categories as $index => $category): ?>
             <li class="nav-item">
               
@@ -249,12 +249,12 @@ include 'data.php';
     <!-- Container for Products -->
     <div class="tab-content mt-4" id="productContainer">
         <?php foreach ($categories as $index => $category): ?>
-            <div class="row category-products <?= $index === 0 ? '' : 'd-none' ?>" 
+            <div class="row mx-auto category-products <?= $index === 0 ? '' : 'd-none' ?>" 
                  data-category-id="<?= $category['id'] ?>">
                 <?php if (!empty($products[$category['id']])): ?>
                     <?php foreach ($products[$category['id']] as $product): ?>
                         <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                            <div class="card" style="width: 15rem;">
+                            <div class="card">
                                 <img src="./assets/product/<?= htmlspecialchars($product['image']) ?>" 
                                      class="card-img-top img-fluid" 
                                      alt="<?= htmlspecialchars($product['name']) ?>" 
