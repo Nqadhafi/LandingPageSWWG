@@ -47,7 +47,7 @@ if ($isEdit) {
 
                             <div class="form-group">
                                 <label>Teks Artikel:</label>
-                                <textarea name="content" class="form-control" rows="5" required><?php echo $isEdit ? htmlspecialchars($editingArticle['content']) : ''; ?></textarea>
+                                <textarea name="content" class="form-control" rows="5" required><?php echo $isEdit ? $editingArticle['content'] : ''; ?></textarea>
                             </div>
 
                             <div class="form-group">
@@ -66,8 +66,8 @@ if ($isEdit) {
                         </form>
                     <?php else: ?>
                         <!-- Tampilkan artikel -->
-                        <h3><?php echo htmlspecialchars($article['title']); ?></h3>
-                        <p><?php echo nl2br(htmlspecialchars($article['content'])); ?></p>
+                        <h3><?php echo $article['title']; ?></h3>
+                        <p><?php echo nl2br($article['content']); ?></p>
                         <?php if ($article['image']): ?>
                             <img src="../assets/img/<?php echo htmlspecialchars($article['image']); ?>" alt="Article Image" class="img-fluid mb-3" style="max-width: 200px;">
                         <?php endif; ?>

@@ -113,7 +113,7 @@ include 'data.php';
         </div>
         <div class="col-md-5">
           <!-- Placeholder for image -->
-          <div class="bg-light" style="width: 100%; height: 20rem">
+          <div class="" style="width: 100%; height: 20rem">
             <img src="./assets/img/<?php echo $artikel['image'] ?? ''?>" alt="<?php echo $artikel['alt_text'] ?? ''?>" class="img-fluid">
           </div>
         </div>

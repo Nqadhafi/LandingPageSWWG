@@ -12,8 +12,8 @@ $action = $_POST['action'] ?? $_GET['action'] ?? null;
 
 if ($action === 'Tambah Artikel') {
     // Sanitasi input
-    $title = htmlspecialchars($_POST['title'], ENT_QUOTES, 'UTF-8');
-    $content = htmlspecialchars($_POST['content'], ENT_QUOTES, 'UTF-8');
+    $title = $_POST['title'];
+    $content = $_POST['content'];
     $alt_text = htmlspecialchars($_POST['alt_text'], ENT_QUOTES, 'UTF-8');
 
     // Validasi dan upload file gambar
@@ -53,10 +53,10 @@ if ($action === 'Update Artikel') {
         die("ID tidak valid.");
     }
 
-    $title = htmlspecialchars($_POST['title'], ENT_QUOTES, 'UTF-8');
-    $content = htmlspecialchars($_POST['content'], ENT_QUOTES, 'UTF-8');
+    $title = $_POST['title'];
+    $content = $_POST['content'];
     $alt_text = htmlspecialchars($_POST['alt_text'], ENT_QUOTES, 'UTF-8');
-
+    $allowedTypes = ['image/jpeg', 'image/png', 'image/gif'];
     // Update gambar jika ada file baru
     if (!empty($_FILES['image']['name'])) {
         $image = $_FILES['image'];
